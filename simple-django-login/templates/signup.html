@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<body style="height:100vh;">
+    <div class="login-form">
+  <h2>Register</h2>
+  
+    {% csrf_token %}
+   
+        <div class="form-group">  
+          <input type="text" name="username" class="form-control" value="testlogin" autofocus="" required="" id="id_username" maxlength="254">
+        </div>
+        <div class="form-group">  
+            <input type="password" name="password" class="form-control" value="testlogin" autofocus="" required="" id="id_password" maxlength="254">
+          </div>
+        
+      
+    <button type="button" onclick="submitSign();" class="btn btn-primary btn-lg btn-block">Sign up</button>
+  
+  </div>
+  <script>
+    function submitSign() {
+      var id_username = document.getElementById('id_username');
+      var id_password = document.getElementById('id_password');
+      if (id_username && id_password) {
+        window.location = '/';
+      }
+    }
+  </script>
+{% endblock %}
