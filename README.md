@@ -4,6 +4,8 @@
 
 ### 1. Clone the repository:
 
+   git clone https://github.com/singlashashwat/djangologin.git
+
 ### 2. Run migrations:
 
     python manage.py migrate
